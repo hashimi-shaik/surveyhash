@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @survey.name
+  - @survey.questions.each do |question|
+    %li
+      = question.title
+= link_to 'Edit', edit_survey_path(@survey)
+|
+= link_to 'Back', surveys_path

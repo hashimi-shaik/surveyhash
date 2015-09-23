@@ -1,0 +1,9 @@
+%br
+= f.label 'Question'
+%br
+= f.text_field :title
+= f.check_box :_destroy
+= f.label :_destroy, 'Remove Question'
+
+= f.fields_for :answers do |f|
+  = render 'answer_fields', f: f
